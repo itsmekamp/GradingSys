@@ -57,6 +57,8 @@ while(True):
         avg = avg(grdList)
         print("Your grade is " + gradeLetter(avg))
         break
+    elif grd == "":
+        print("Invalid Grade. ErrorCode: EmptyInput")
     else:
         try:
             grd = int(grd)
@@ -64,6 +66,6 @@ while(True):
                 grdList.append(grd)
                 count += 1
             else:
-                print("ERROR: GRADE IS BIGGER THAN 100")
+                print("Grade larger than 100.")
         except ValueError:
-            print("ERROR: GRADE IS NOT INTEGER")
+            print("Invalid Grade. ErrorCode: NotInteger")
